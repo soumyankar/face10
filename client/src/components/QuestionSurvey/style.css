@@ -1,0 +1,57 @@
+.question-survey {
+  align-items: flex-start;
+  display: flex;
+  gap: 11px;
+  position: relative;
+  width: fit-content;
+}
+
+.question-survey .element-question-number {
+  color: var(--lemon);
+  font-family: var(--work-sans-h6-medium-font-family);
+  font-size: var(--work-sans-h6-medium-font-size);
+  font-style: var(--work-sans-h6-medium-font-style);
+  font-weight: var(--work-sans-h6-medium-font-weight);
+  height: 46px;
+  letter-spacing: var(--work-sans-h6-medium-letter-spacing);
+  line-height: var(--work-sans-h6-medium-line-height);
+  margin-top: -1px;
+  position: relative;
+  width: 33px;
+}
+
+.question-survey .frame {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  width: fit-content;
+}
+
+.question-survey .title {
+  color: var(--white);
+  font-family: var(--work-sans-h3-font-family);
+  font-size: var(--work-sans-h3-font-size);
+  font-style: var(--work-sans-h3-font-style);
+  font-weight: var(--work-sans-h3-font-weight);
+  letter-spacing: var(--work-sans-h3-letter-spacing);
+  line-height: var(--work-sans-h3-line-height);
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: 825px;
+}
+
+.question-survey .add-description {
+  color: var(--white);
+  font-family: var(--space-mono-h5-regular-font-family);
+  font-size: var(--space-mono-h5-regular-font-size);
+  font-style: var(--space-mono-h5-regular-font-style);
+  font-weight: var(--space-mono-h5-regular-font-weight);
+  letter-spacing: var(--space-mono-h5-regular-letter-spacing);
+  line-height: var(--space-mono-h5-regular-line-height);
+  position: relative;
+  white-space: nowrap;
+  width: 825px;
+}

@@ -1,0 +1,90 @@
+.page-play-the-survey {
+    background-color: #7000ff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .page-play-the-survey .overlap-group-wrapper {
+    background-color: #7000ff;
+    border: 1px none;
+    height: 1024px;
+    width: 1440px;
+  }
+  
+  .page-play-the-survey .overlap-group-2 {
+    background-image: url(../../../static/img/background.png);
+    background-size: 100% 100%;
+    height: 1024px;
+    position: relative;
+  }
+  
+  .page-play-the-survey .white-line {
+    height: 2px;
+    left: 283px;
+    position: absolute;
+    top: 527px;
+    width: 874px;
+  }
+  
+  .page-play-the-survey .text-wrapper {
+    color: var(--white);
+    font-family: var(--work-sans-h5-regular-font-family);
+    font-size: var(--work-sans-h5-regular-font-size);
+    font-style: var(--work-sans-h5-regular-font-style);
+    font-weight: var(--work-sans-h5-regular-font-weight);
+    left: 284px;
+    letter-spacing: var(--work-sans-h5-regular-letter-spacing);
+    line-height: var(--work-sans-h5-regular-line-height);
+    opacity: 0.5;
+    position: absolute;
+    top: 489px;
+    white-space: nowrap;
+    width: 825px;
+  }
+  
+  .page-play-the-survey .logo-small {
+    height: 25px;
+    left: 41px;
+    object-fit: cover;
+    position: absolute;
+    top: 61px;
+    width: 29px;
+  }
+  
+  .page-play-the-survey .face {
+    color: var(--white);
+    font-family: var(--space-mono-h6-font-family);
+    font-size: var(--space-mono-h6-font-size);
+    font-style: var(--space-mono-h6-font-style);
+    font-weight: var(--space-mono-h6-font-weight);
+    left: 78px;
+    letter-spacing: var(--space-mono-h6-letter-spacing);
+    line-height: var(--space-mono-h6-line-height);
+    position: absolute;
+    top: 58px;
+    white-space: nowrap;
+  }
+  
+  .page-play-the-survey .question-survey-instance {
+    left: 240px !important;
+    position: absolute !important;
+    top: 373px !important;
+  }
+  
+  .page-play-the-survey .vector {
+    height: 23px;
+    left: 1344px;
+    position: absolute;
+    top: 72px;
+    width: 21px;
+  }
+  
+  .page-play-the-survey .CTA-instance {
+    height: 47px !important;
+    left: 639px !important;
+    position: absolute !important;
+    top: 719px !important;
+  }
+  

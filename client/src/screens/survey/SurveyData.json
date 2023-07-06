@@ -1,0 +1,173 @@
+{
+    "title": "<SurveyTitleGoesHere>",
+    "description": "<SurveyDescriptionGoesHere>",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "text",
+        "name": "age",
+        "indent": 1,
+        "title": "Age",
+        "isRequired": true,
+        "inputType": "number",
+        "min": 0
+       },
+       {
+        "type": "checkbox",
+        "name": "question1",
+        "title": "Ethnicity",
+        "isRequired": true,
+        "choices": [
+         "Category 1",
+         "Category 2",
+         "Category 3",
+         "Category 4",
+         "Category 5",
+         {
+          "value": "Item 6",
+          "text": "Category 6"
+         }
+        ],
+        "showOtherItem": true,
+        "showSelectAllItem": true
+       },
+       {
+        "type": "boolean",
+        "name": "question2",
+        "title": "Do you identify with the LGBTQ+ community?",
+        "isRequired": true
+       },
+       {
+        "type": "checkbox",
+        "name": "question3",
+        "title": "Current gender identity",
+        "isRequired": true,
+        "choices": [
+         "Male",
+         "Female",
+         "Non-binary"
+        ],
+        "showOtherItem": true
+       }
+      ],
+      "title": "Basic Demographics",
+      "description": "<Page1DescriptionGoesHere>"
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "rating",
+        "name": "question4",
+        "title": "Have you encountered AI or Facial Recognition technologies in your daily life?",
+        "isRequired": true,
+        "autoGenerate": false,
+        "rateValues": [
+         {
+          "value": "a_lot",
+          "text": "A lot"
+         },
+         {
+          "value": "a_decent_amount",
+          "text": "A decent amount"
+         },
+         {
+          "value": "probably",
+          "text": "Probably"
+         },
+         {
+          "value": "not_much",
+          "text": "Not much"
+         },
+         {
+          "value": "not_at_all",
+          "text": "Not at all"
+         }
+        ]
+       },
+       {
+        "type": "boolean",
+        "name": "question5",
+        "title": "Do you perceive your gender as something that changes over time?",
+        "description": "Gender identity as fluid?",
+        "isRequired": true
+       },
+       {
+        "type": "boolean",
+        "name": "question6",
+        "title": "Does it change only in terms of identity or also in terms of gender expression?",
+        "isRequired": true
+       },
+       {
+        "type": "image",
+        "name": "question7",
+        "contentMode": "image",
+        "imageFit": "cover",
+        "imageHeight": "auto",
+        "imageWidth": "100%"
+       },
+       {
+        "type": "matrix",
+        "name": "question8",
+        "title": "Consider the image above: Focusing on your face, how much do you think each of the following facial features contribute to your gender identity?",
+        "description": "/* Probably need to fix this image and add identifiers or markers to the facial features we are aiming towards, but I am keeping this as is for now. */",
+        "isRequired": true,
+        "columns": [
+         "A lot",
+         "Probably a lot",
+         "50-50",
+         "Not so much",
+         "Not at all"
+        ],
+        "rows": [
+         "Eyes",
+         "Nose",
+         "Lips",
+         "Cheekbones",
+         "Eyebrows"
+        ]
+       },
+       {
+        "type": "matrix",
+        "name": "question9",
+        "title": "How would you manipulate each of these features to better represent your current gender identity?",
+        "description": "/* I feel the parameters to this question can be improved upon. The answers might not seem too straight-forward to the reader at first glance? */",
+        "isRequired": true,
+        "columns": [
+         "Biometric Manipulation",
+         "External Manipulation"
+        ],
+        "rows": [
+         "Eyes",
+         "Nose",
+         "Lips",
+         "Cheekbones",
+         "Eyebrows"
+        ]
+       }
+      ],
+      "title": "<Page2TitleGoesHere>",
+      "description": "<Page2DescriptionGoesHere>"
+     },
+     {
+      "name": "page3",
+      "elements": [
+       {
+        "type": "paneldynamic",
+        "name": "question10",
+        "templateElements": [
+         {
+          "type": "comment",
+          "name": "question11",
+          "title": "Is this where the survey ends and we move onto the interactive survey part?"
+         }
+        ]
+       }
+      ],
+      "title": "<Page3TitleGoesHere>",
+      "description": "<Page3DescriptionGoesHere>"
+     }
+    ]
+   }

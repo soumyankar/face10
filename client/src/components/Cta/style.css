@@ -1,0 +1,151 @@
+.CTA {
+  align-items: center;
+  display: flex;
+  gap: 11px;
+  position: relative;
+  width: fit-content;
+}
+.CTA:hover {
+  cursor: pointer;
+}
+
+.CTA .frame {
+  align-items: center;
+  display: flex;
+  gap: 11px;
+  position: relative;
+  width: fit-content;
+}
+
+.CTA .let-s-find-out {
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.CTA .noun-arrow {
+  height: 31px;
+  min-width: 37px;
+  overflow: hidden;
+  position: relative;
+  transform: rotate(-180deg);
+}
+
+.CTA .group {
+  height: 22px;
+  left: 5px;
+  position: absolute;
+  top: 4px;
+  transform: rotate(180deg);
+  width: 27px;
+}
+
+.CTA .overlap-group {
+  height: 1311px;
+  left: 0;
+  position: absolute;
+  top: 1220px;
+  width: 6640px;
+}
+
+.CTA .created-by-nailil {
+  color: #ffffff;
+  font-family: "Helvetica Neue-Bold", Helvetica;
+  font-size: 5px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 6640px;
+}
+
+.CTA .from-the-noun {
+  color: #ffffff;
+  font-family: "Helvetica Neue-Bold", Helvetica;
+  font-size: 5px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 596px;
+  width: 6399px;
+}
+
+.CTA.violet-botton {
+  -webkit-backdrop-filter: blur(144px) brightness(100%);
+  backdrop-filter: blur(144px) brightness(100%);
+  background-color: var(--violetdark);
+  border-radius: 36px;
+  overflow: hidden;
+  padding: 8px 16px;
+}
+
+.CTA.default {
+  background-color: var(--violetdark);
+  border: 7px solid;
+  border-color: var(--lemon);
+  box-shadow: 7px 7px 0px #e0fd2c;
+  padding: 21px 26px;
+}
+
+.CTA.yellow-botton {
+  -webkit-backdrop-filter: blur(144px) brightness(100%);
+  backdrop-filter: blur(144px) brightness(100%);
+  background-color: var(--lemon);
+  border-radius: 36px;
+  overflow: hidden;
+  padding: 8px 16px;
+}
+
+.CTA.home-page-botton {
+  -webkit-backdrop-filter: blur(144px) brightness(100%);
+  backdrop-filter: blur(144px) brightness(100%);
+  background-color: var(--lemon);
+  border-radius: 36px;
+  overflow: hidden;
+  padding: 14px 16px;
+}
+
+.CTA.violet-botton .let-s-find-out {
+  color: var(--white);
+  font-family: var(--work-sans-h5-font-family);
+  font-size: var(--work-sans-h5-font-size);
+  font-style: var(--work-sans-h5-font-style);
+  font-weight: var(--work-sans-h5-font-weight);
+  letter-spacing: var(--work-sans-h5-letter-spacing);
+  line-height: var(--work-sans-h5-line-height);
+}
+
+.CTA.default .let-s-find-out {
+  color: var(--white);
+  font-family: var(--work-sans-h4-font-family);
+  font-size: var(--work-sans-h4-font-size);
+  font-style: var(--work-sans-h4-font-style);
+  font-weight: var(--work-sans-h4-font-weight);
+  letter-spacing: var(--work-sans-h4-letter-spacing);
+  line-height: var(--work-sans-h4-line-height);
+}
+
+.CTA.yellow-botton .let-s-find-out {
+  color: var(--dark);
+  font-family: var(--work-sans-h5-font-family);
+  font-size: var(--work-sans-h5-font-size);
+  font-style: var(--work-sans-h5-font-style);
+  font-weight: var(--work-sans-h5-font-weight);
+  letter-spacing: var(--work-sans-h5-letter-spacing);
+  line-height: var(--work-sans-h5-line-height);
+}
+
+.CTA.home-page-botton .let-s-find-out {
+  color: var(--dark);
+  font-family: var(--work-sans-h4-font-family);
+  font-size: var(--work-sans-h4-font-size);
+  font-style: var(--work-sans-h4-font-style);
+  font-weight: var(--work-sans-h4-font-weight);
+  letter-spacing: var(--work-sans-h4-letter-spacing);
+  line-height: var(--work-sans-h4-line-height);
+}

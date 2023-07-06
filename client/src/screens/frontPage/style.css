@@ -1,0 +1,175 @@
+.page-homepage {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.page-homepage .overlap-wrapper {
+  background-color: #ffffff;
+  border: 1px none;
+  height: 1024px;
+  width: 1440px;
+}
+
+.page-homepage .overlap {
+  background-image: url(../../../static/img/background.png);
+  background-size: 100% 100%;
+  height: 1024px;
+  position: relative;
+}
+
+.page-homepage .div {
+  height: 1024px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.page-homepage .img-face {
+  height: 886px;
+  left: 699px;
+  object-fit: cover;
+  position: absolute;
+  top: 103px;
+  width: 741px;
+}
+
+.page-homepage .img-diamonds {
+  height: 964px;
+  left: 545px;
+  position: absolute;
+  top: 60px;
+  width: 895px;
+}
+
+.page-homepage .yellow-rectangle {
+  border: 6px solid;
+  border-color: var(--lemon);
+  height: 620px;
+  left: 863px;
+  position: absolute;
+  top: 206px;
+  width: 498px;
+}
+
+.page-homepage .description {
+  color: var(--white);
+  font-family: var(--space-mono-h5-font-family);
+  font-size: var(--space-mono-h5-font-size);
+  font-style: var(--space-mono-h5-font-style);
+  font-weight: var(--space-mono-h5-font-weight);
+  left: 92px;
+  letter-spacing: var(--space-mono-h5-letter-spacing);
+  line-height: var(--space-mono-h5-line-height);
+  position: absolute;
+  top: 469px;
+  width: 466px;
+}
+
+.page-homepage .header-instance {
+  left: 0 !important;
+  mix-blend-mode: normal !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.page-homepage .menu-variant7 {
+  z-index: 0 !important;
+}
+
+.page-homepage .title {
+  color: transparent;
+  font-family: var(--work-sans-title-font-family);
+  font-size: var(--work-sans-title-font-size);
+  font-style: var(--work-sans-title-font-style);
+  font-weight: var(--work-sans-title-font-weight);
+  left: 85px;
+  letter-spacing: var(--work-sans-title-letter-spacing);
+  line-height: var(--work-sans-title-line-height);
+  position: absolute;
+  top: 241px;
+}
+
+.page-homepage .span {
+  color: #ffffff;
+  font-family: var(--work-sans-title-font-family);
+  font-size: var(--work-sans-title-font-size);
+  font-style: var(--work-sans-title-font-style);
+  font-weight: var(--work-sans-title-font-weight);
+  letter-spacing: var(--work-sans-title-letter-spacing);
+  line-height: var(--work-sans-title-line-height);
+}
+
+.page-homepage .text-wrapper-2 {
+  color: #e0fd2c;
+  font-family: var(--work-sans-title-font-family);
+  font-size: var(--work-sans-title-font-size);
+  font-style: var(--work-sans-title-font-style);
+  font-weight: var(--work-sans-title-font-weight);
+  letter-spacing: var(--work-sans-title-letter-spacing);
+  line-height: var(--work-sans-title-line-height);
+}
+
+.page-homepage .logo-small {
+  height: 25px;
+  left: 96px;
+  object-fit: cover;
+  position: absolute;
+  top: 160px;
+  width: 29px;
+}
+
+.page-homepage .face {
+  color: var(--white);
+  font-family: var(--space-mono-h6-font-family);
+  font-size: var(--space-mono-h6-font-size);
+  font-style: var(--space-mono-h6-font-style);
+  font-weight: var(--space-mono-h6-font-weight);
+  left: 133px;
+  letter-spacing: var(--space-mono-h6-letter-spacing);
+  line-height: var(--space-mono-h6-line-height);
+  position: absolute;
+  top: 157px;
+  white-space: nowrap;
+}
+
+.page-homepage .CTA-instance {
+  left: 92px !important;
+  position: absolute !important;
+  top: 700px !important;
+}
+
+.page-homepage .description-2 {
+  color: var(--violetlight);
+  font-family: "Work Sans", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: 369px;
+  letter-spacing: 0;
+  line-height: 25.2px;
+  position: absolute;
+  top: 719px;
+  white-space: nowrap;
+  width: 138px;
+}
+
+.page-homepage .text-wrapper-3 {
+  font-family: var(--work-sans-h6-medium-font-family);
+  font-size: var(--work-sans-h6-medium-font-size);
+  font-style: var(--work-sans-h6-medium-font-style);
+  font-weight: var(--work-sans-h6-medium-font-weight);
+  letter-spacing: var(--work-sans-h6-medium-letter-spacing);
+  line-height: var(--work-sans-h6-medium-line-height);
+}
+
+.page-homepage .text-wrapper-4 {
+  font-family: var(--work-sans-h6-font-family);
+  font-size: var(--work-sans-h6-font-size);
+  font-style: var(--work-sans-h6-font-style);
+  font-weight: var(--work-sans-h6-font-weight);
+  letter-spacing: var(--work-sans-h6-letter-spacing);
+  line-height: var(--work-sans-h6-line-height);
+}
