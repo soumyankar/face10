@@ -1,10 +1,18 @@
-import React from "react";
+import { useState, React } from "react";
 import { Cta } from "../../components/Cta";
 import { Header } from "../../components/Header";
 import { MenuVariant } from "../../components/MenuVariant";
 import "./style.css";
 
+/* MODAL MUI */
+import { Button, Modal, Backdrop, Fade } from '@mui/material';
+
 export const FrontPage = () => {
+  const [open, setOpen] = useState(true);
+
+  const handleAccept = () => {
+    setOpen(false);
+  };
   return (
     <div className="page-homepage">
       <div className="overlap-wrapper">

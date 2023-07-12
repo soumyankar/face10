@@ -1,0 +1,124 @@
+.my-survey {
+    background-color: #000 !important;
+}
+
+.my-survey .sv_main{
+    background-color: #000 !important;
+}
+
+.sv_main .sv_default_css {
+    color: var(--white) !important;
+    font-family: var(--work-sans-h3-font-family) !important;
+    font-size: var(--work-sans-h3-font-size) !important;
+    font-style: var(--work-sans-h3-font-style) !important;
+    font-weight: var(--work-sans-h3-font-weight) !important;
+    letter-spacing: var(--work-sans-h3-letter-spacing) !important;
+    line-height: var(--work-sans-h3-line-height) !important;   
+}
+
+.my-survey .sv_main .sv_container {
+    background-color: #000;
+}
+.my-survey .sv_main .sv_container .sv_header {
+    background-color: #000;
+}
+
+.my-survey .sv_main .sv_container .sv-components-row .sv_body {
+    background-color: #000;
+}
+
+.my-survey .sv_main .sv_container .sv-components-row .sv_body .sv_row {
+    background-color: #000;
+}
+
+.my-survey .sv_main .sv_container .sv_header .sv_header__text {
+    color: var(--white);
+    font-family: var(--work-sans-h3-font-family);
+    font-size: var(--work-sans-h3-font-size);
+    font-style: var(--work-sans-h3-font-style);
+    font-weight: var(--work-sans-h3-font-weight);
+    letter-spacing: var(--work-sans-h3-letter-spacing);
+    line-height: var(--work-sans-h3-line-height);   
+}
+
+.my-survey .sv_main .sv_container .sv-components-row .sv_body .sv_p_root .sv_page_title, .sv-string-viewer {
+    color: var(--white);
+    font-family: var(--work-sans-h3-font-family);
+    font-size: var(--work-sans-h3-font-size);
+    font-style: var(--work-sans-h3-font-style);
+    font-weight: var(--work-sans-h3-font-weight);
+    letter-spacing: var(--work-sans-h3-letter-spacing);
+    line-height: var(--work-sans-h3-line-height);  
+}
+
+
+.my-survey .sv_main .sv_container .sv-components-row .sv_body .sv_row input {
+    color: var(--white);
+    font-family: var(--work-sans-h5-regular-font-family);
+    font-size: var(--work-sans-h5-regular-font-size);
+    font-style: var(--work-sans-h5-regular-font-style);
+    font-weight: var(--work-sans-h5-regular-font-weight);
+    letter-spacing: var(--work-sans-h5-regular-letter-spacing);
+    line-height: var(--work-sans-h5-regular-line-height);
+    opacity: 1;
+    white-space: nowrap;
+}
+.my-survey .sv_header {
+    color: var(--white);
+    font-family: var(--work-sans-h3-font-family);
+    font-size: var(--work-sans-h3-font-size);
+    font-style: var(--work-sans-h3-font-style);
+    font-weight: var(--work-sans-h3-font-weight);
+    letter-spacing: var(--work-sans-h3-letter-spacing);
+    line-height: var(--work-sans-h3-line-height);
+}
+
+.my-survey .q_num {
+    color: var(--lemon);
+    font-family: var(--work-sans-h6-medium-font-family);
+    font-size: var(--work-sans-h6-medium-font-size);
+    font-style: var(--work-sans-h6-medium-font-style);
+    font-weight: var(--work-sans-h6-medium-font-weight);
+    letter-spacing: var(--work-sans-h6-medium-letter-spacing);
+    line-height: var(--work-sans-h6-medium-line-height);
+}
+.my-survey .sv_header {
+    color: var(--white);
+    font-family: var(--work-sans-h3-font-family);
+    font-size: var(--work-sans-h3-font-size);
+    font-style: var(--work-sans-h3-font-style);
+    font-weight: var(--work-sans-h3-font-weight);
+    letter-spacing: var(--work-sans-h3-letter-spacing);
+    line-height: var(--work-sans-h3-line-height);
+}
+
+.my-survey .sv_q_title {
+    color: var(--white);
+    font-family: var(--work-sans-h3-font-family);
+    font-size: var(--work-sans-h3-font-size);
+    font-style: var(--work-sans-h3-font-style);
+    font-weight: var(--work-sans-h3-font-weight);
+    letter-spacing: var(--work-sans-h3-letter-spacing);
+    line-height: var(--work-sans-h3-line-height);
+}
+.my-survey .sv_body .sv_q_checkbox .checkbox-material {
+    border-color: #ff0000;
+}
+
+/* INPUT BOX STYLE */
+.sv_main .sv_p_root .sv_q .sv_q_other input, .sv_main .sv_p_root .sv_q .sv_q_dropdown_control, .sv_main .sv_p_root .sv_q input:not([type="button"]):not([type="reset"]):not([type="submit"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]), .sv_main .sv_p_root .sv_q select {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+    color: #000;
+    /* Add any additional styles you want */
+}
+
+.sv_main .sv_p_root .sv_q .sv_q_other input, .sv_main .sv_p_root .sv_q .sv_q_dropdown_control, .sv_main .sv_p_root .sv_q input:not([type="button"]):not([type="reset"]):not([type="submit"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]), .sv_main .sv_p_root .sv_q select::placeholder {
+    color: #000;
+  }
+  
+.sv_main .sv_p_root .sv_q .sv_q_other input, .sv_main .sv_p_root .sv_q .sv_q_dropdown_control, .sv_main .sv_p_root .sv_q input:not([type="button"]):not([type="reset"]):not([type="submit"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]), .sv_main .sv_p_root .sv_q select:focus::placeholder {
+    color: #fff;
+  }

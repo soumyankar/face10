@@ -1,17 +1,29 @@
-/* REACT and ANIMA */
+/* REACT and ANIMA and MUI*/
 import React, { useCallback, useState } from 'react';
-import { Cta } from "../../components/Cta";
-import { QuestionSurvey } from "../../components/QuestionSurvey";
-import "./style.css";
 import { useNavigate } from 'react-router-dom'; // Import useHistory from react-router-dom
+import { AppBar, Toolbar, Typography, Container } from "@mui/material";
 
 /* SURVEY.js */
 import * as Survey from 'survey-react';
-import 'survey-react/survey.css';
 import { Model } from 'survey-core';
 import axios from 'axios';
 // import 'survey-core/defaultV2.min.css';
 import surveyJson from './SurveyData.json';
+
+/* STYLING */
+import "./style.css";
+import 'survey-react/survey.css';
+import './surveyStyle.css';
+
+/* COMPONENTS */
+import { Header } from "../../components/Header";
+import { MenuVariant } from "../../components/MenuVariant";
+
+/* BACKEND ENDPOINTS */
+// Grab the endpoint for the analysis page
+// Base server URL + Endpoint URL
+const surveyResponseHandlerEndpoint = process.env.REACT_APP_BACKEND_URL + process.env.REACT_APP_SURVEY_RESPONSE_HANDLER_ENDPOINT;
+console.log(surveyResponseHandlerEndpoint);
 
 export const Survey = () => {
     const navigate = useNavigate(); // Get the history object from react-router-dom
@@ -24,7 +36,7 @@ export const Survey = () => {
             // Perform any additional actions upon successful response
             
             // Redirect to a new page
-            navigate('/thank-you', { state: { surveyResult: surveyResponse } }); // Replace '/thank-you' with the desired URL
+            navigate('/survey/transition', { state: { surveyResult: surveyResponse } }); // Replace '/thank-you' with the desired URL
         } catch (error) {
             console.error('Error sending data:', error);
             // Handle the error appropriately
@@ -38,17 +50,20 @@ export const Survey = () => {
     });
 
     return (
-        <div className="page-play-the-survey">
-        <div className="overlap-group-wrapper">
-        <div className="overlap-group-2">
-        <img className="white-line" alt="White line" src="/img/white-line.svg" />
-        <div className="text-wrapper">Type your answer here</div>
-        <img className="logo-small" alt="Logo small" src="/img/logo-small.png" />
-        <div className="face">Face10</div>
-        {/* <Survey.Survey model={surveyModel} /> */}
-        <img className="vector" alt="Vector" src="/img/vector-1.svg" />
-        <Cta className="CTA-instance" property1="yellow-botton" text="Go ahead" />
-        </div>
+        <div style={{ backgroundColor: "#000", width: "auto", height:"auto" }}>
+        <AppBar position="static" sx={{ backgroundColor: "#000" }}>
+        <Header
+                className="header-instance"
+                menuProperty1="unselected-02"
+                menuProperty11="mouse-over-05"
+                override={<MenuVariant className="menu-variant7" text="About" />}
+                hideMenuItems="false"
+              />
+        </AppBar>
+        <div>
+        <Container className="my-survey" maxWidth="md" sx={{ marginTop: "2rem", backgroundColor:"#000" }}>
+            <Survey.Survey model={surveyModel} />
+        </Container>
         </div>
         </div>
         );

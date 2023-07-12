@@ -1,0 +1,145 @@
+{
+    "title": "Case Study",
+    "logoPosition": "right",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "boolean",
+        "name": "machine_guess_correct_gender",
+        "title": "Did the machine guess your correct gender?",
+        "isRequired": true
+       },
+       {
+        "type": "boolean",
+        "name": "question1",
+        "visibleIf": "{machine_guess_correct_gender} = true",
+        "title": "Have you ever found yourself in a similar situation?",
+        "isRequired": true
+       },
+       {
+        "type": "rating",
+        "name": "discomfort_experience_during_simulation",
+        "visibleIf": "{machine_guess_correct_gender} = true",
+        "title": "How much discomfort did you experience during the simulation?",
+        "description": "Rate your experience on a scale from 1 to 10, 1 being ‘No Discomfort’ and 10 being ‘Extreme level of Discomfort",
+        "isRequired": true,
+        "rateCount": 10,
+        "rateMax": 10
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "rating",
+        "name": "misgendered_by_machine_worse_misgender_by_human",
+        "title": "Being misgendered by the machine is WORSE than being misgendered by a human.",
+        "description": "Please select how much you agree or disagree with the following statements. ",
+        "isRequired": true,
+        "autoGenerate": false,
+        "rateValues": [
+         {
+          "value": 1,
+          "text": "Strongly Agree"
+         },
+         {
+          "value": 2,
+          "text": "Agree"
+         },
+         {
+          "value": 3,
+          "text": "Undecided/Neutral"
+         },
+         {
+          "value": 4,
+          "text": "Disagree"
+         },
+         {
+          "value": 5,
+          "text": "Strongly Disagree"
+         }
+        ]
+       },
+       {
+        "type": "rating",
+        "name": "question2",
+        "title": "Being misgendered by a machine is BETTER than being misgendered by a human.",
+        "description": "Please select how much you agree or disagree with the following statements.",
+        "isRequired": true,
+        "autoGenerate": false,
+        "rateValues": [
+         {
+          "value": 1,
+          "text": "Strongly Agree"
+         },
+         {
+          "value": 2,
+          "text": "Agree"
+         },
+         {
+          "value": 3,
+          "text": "Undecided/Neutral"
+         },
+         {
+          "value": 4,
+          "text": "Disagree"
+         },
+         {
+          "value": 5,
+          "text": "Strongly Disagree"
+         }
+        ]
+       },
+       {
+        "type": "rating",
+        "name": "no_difference_between_misgendered_machine_and_human",
+        "title": "There is no difference between being misgendered by a machine and being misgendered by a human",
+        "description": "Please select how much you agree or disagree with the following statements. ",
+        "isRequired": true,
+        "autoGenerate": false,
+        "rateValues": [
+         {
+          "value": 1,
+          "text": "Strongly Agree"
+         },
+         {
+          "value": 2,
+          "text": "Agree"
+         },
+         {
+          "value": 3,
+          "text": "Undecided/Neutral"
+         },
+         {
+          "value": 4,
+          "text": "Disagree"
+         },
+         {
+          "value": 5,
+          "text": "Strongly Disagree"
+         }
+        ]
+       },
+       {
+        "type": "boolean",
+        "name": "question3",
+        "visibleIf": "{no_difference_between_misgendered_machine_and_human} = 4 or {no_difference_between_misgendered_machine_and_human} = 5",
+        "title": "Have you ever found yourself in a similar situation?",
+        "isRequired": true
+       },
+       {
+        "type": "rating",
+        "name": "picture_scenario_machine_misgendering_simulation",
+        "title": "Picture a scenario in which, during the simulation, the machine would have guessed your gender wrongly. How much discomfort do you think you would have experienced?",
+        "description": "Rate your experience on a scale from 1 to 10, 1 being ‘No Discomfort’ and 10 being ‘Extreme level of Discomfort’ ",
+        "isRequired": true,
+        "rateCount": 10,
+        "rateMax": 10
+       }
+      ]
+     }
+    ]
+   }
