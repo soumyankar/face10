@@ -61,7 +61,7 @@ export const Survey = () => {
               />
         </AppBar>
         <Container>
-        <div className="my-survey" maxWidth="md" sx={{ marginTop: "2rem", backgroundColor:"#000" }}>
+        <div className="my-survey" maxwidth="md" sx={{ marginTop: "2rem", backgroundColor:"#000" }}>
             <Survey.Survey model={surveyModel} />
         </div>
         </Container>
