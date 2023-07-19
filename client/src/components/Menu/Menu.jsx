@@ -4,15 +4,24 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 */
 
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 import React from "react";
 import "./style.css";
 
-export const Menu = ({ property1, className, text = "Home Page" }) => {
+export const Menu = ({ property1, className, text = "Home Page", link }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (link) {
+      navigate(link); // Use the navigate function to redirect to the provided link
+    }
+  };
+
   return (
-    <div className={`menu ${property1} ${className}`}>
+    <div className={`menu ${property1} ${className}`} onClick={handleClick} style={{ cursor: "pointer" }}>
       <div className="home-page">{text}</div>
     </div>
-  );
+  )
 };
 
 Menu.propTypes = {

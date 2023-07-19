@@ -41,17 +41,6 @@
     line-height: var(--work-sans-h3-line-height);   
 }
 
-.my-survey .sv_main .sv_container .sv-components-row .sv_body .sv_p_root .sv_page_title, .sv-string-viewer {
-    color: var(--white);
-    font-family: var(--work-sans-h3-font-family);
-    font-size: var(--work-sans-h3-font-size);
-    font-style: var(--work-sans-h3-font-style);
-    font-weight: var(--work-sans-h3-font-weight);
-    letter-spacing: var(--work-sans-h3-letter-spacing);
-    line-height: var(--work-sans-h3-line-height);  
-}
-
-
 .my-survey .sv_main .sv_container .sv-components-row .sv_body .sv_row input {
     color: var(--white);
     font-family: var(--work-sans-h5-regular-font-family);

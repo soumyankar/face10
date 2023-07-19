@@ -18,23 +18,32 @@ export const ThankYou = () => {
   // const surveyResult = location.state && location.state.surveyResult;
 
   return (
-    <div style={{ backgroundColor: "#000", width: "auto", height:"auto" }}>
+    <div style={{ backgroundColor: "#000", width: "100%", height: "100%" }}>
     <AppBar position="static" sx={{ backgroundColor: "#000" }}>
-    <Header
-            className="header-instance"
-            menuProperty1="unselected-02"
-            menuProperty11="mouse-over-05"
-            override={<MenuVariant className="menu-variant7" text="About" />}
-            hideMenuItems="false"
-          />
+      <Header
+        className="header-instance"
+        menuProperty1="unselected-02"
+        menuProperty11="mouse-over-05"
+        override={<MenuVariant className="menu-variant7" text="About" />}
+        hideMenuItems="false"
+      />
     </AppBar>
-    <div>
-    <Container maxWidth="md" sx={{ marginTop: "2rem", backgroundColor:"#000" }}>
-    <Box p={2}>
-      <Typography variant="h2" sx={{ color: "#FFF", fontWeight: "bold" }}>
-        Thank you for finishing the survey!
-      </Typography>
-      <Box sx={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}>
+    <div style={{ flex: 1 }}>
+      <Container maxWidth="md" sx={{ marginTop: "2rem", backgroundColor: "#000" }}>
+        <Box p={2}>
+          <Typography variant="h2" sx={{ color: "#FFF", fontWeight: "bold" }}>
+            Thats' it! 
+          </Typography>
+          <Typography variant="p" sx={{ color: "#FFF" }}>
+            Thank you for participating in this study.
+          {/* ONLY USING THIS DURING DEVELOPMENT */}
+          {/* {/* {surveyResult && (
+            <Typography variant="p" sx={{ color: "#FFF", fontWeight: "bold" }}>
+              Survey Result:
+              <pre>{JSON.stringify(surveyResult, null, 2)}</pre> */}
+            </Typography>
+        </Box>
+        <Box sx={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}>
             <Button onClick={() => { navigate('/'); }} variant="contained" color="primary" sx={{ marginRight: "1rem" }}>
               Back to Start
             </Button>
@@ -42,15 +51,7 @@ export const ThankYou = () => {
               Analytics
             </Button>
           </Box>
-      {/* UNCOMMENT ONLY DURING DEV MODE */}
-      {/* {surveyResult && (
-        <Typography variant="p" sx={{ color: "#FFF", fontWeight: "bold" }}>
-          Survey Result:
-          <pre>{JSON.stringify(surveyResult, null, 2)}</pre>
-        </Typography>
-      )} */}
-    </Box>
-    </Container>
+      </Container>
     </div>
     </div>
     );

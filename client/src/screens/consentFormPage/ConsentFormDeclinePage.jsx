@@ -1,6 +1,6 @@
 /* REACT */
 import React, { useEffect, useState } from "react";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 /* MUI */
 import { Box, Typography, useTheme } from "@mui/material";
@@ -10,11 +10,10 @@ import { AppBar, Toolbar, Typography, Container } from "@mui/material";
 import { Header } from "../../components/Header";
 import { MenuVariant } from "../../components/MenuVariant";
 
-export const TransitionPage = () => {
-  const location = useLocation();
-  const surveyResult = location.state && location.state.surveyResult;
+export const ConsentFormDeclinePage = () => {
+  const [countdown, setCountdown] = useState(8);
 
-  const [countdown, setCountdown] = useState(10);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -24,10 +23,10 @@ export const TransitionPage = () => {
     setTimeout(() => {
       clearInterval(timer);
       /* LINK TO GENDER DETECTION MODEL */
-      window.location.href = process.env.FLASK_APP_BACKEND_URL;
+    //   window.location.href = "http://127.0.0.1:5000";
       /* ONLY USE HISTORY WHEN REDIRECTING WITHIN APPLICATION */
-      // history.push("http://127.0.0.1:5000"); // Replace "/target-page" with your desired redirection link
-    }, 10000);
+      navigate("/"); // Replace "/target-page" with your desired redirection link
+    }, 8000);
 
     return () => {
       clearInterval(timer);
@@ -35,10 +34,9 @@ export const TransitionPage = () => {
   }, []);
 
   const handleAnchorClick = () => {
-    // using window.location.href because the model is in different repo.
-    window.location.href = process.env.FLASK_APP_BACKEND_URL;
-    // navigate("/"); // Replace "/another-page" with your desired redirection link
+    navigate("/"); // Replace "/another-page" with your desired redirection link
   };
+
   return (
     <div style={{ backgroundColor: "#000", width: "100%", height: "100%" }}>
       <AppBar position="static" sx={{ backgroundColor: "#000" }}>
@@ -53,23 +51,18 @@ export const TransitionPage = () => {
       <div style={{ flex: 1 }}>
         <Container maxWidth="md" sx={{ marginTop: "2rem", backgroundColor: "#000" }}>
           <Box p={2}>
-            <Typography variant="h2" sx={{ color: "#FFF", fontWeight: "bold" }}>
-              Thats' the first part! 
+            <Typography variant="h3" sx={{ color: "#FFF", fontWeight: "bold" }}>
+              We thank you for your time.
             </Typography>
             <Typography variant="p" sx={{ color: "#FFF" }}>
-              The next leg of the study involves an interaction with a facial classification algorithm. Hold on tight!
-            {/* ONLY USING THIS DURING DEVELOPMENT */}
-            {/* {/* {surveyResult && (
-              <Typography variant="p" sx={{ color: "#FFF", fontWeight: "bold" }}>
-                Survey Result:
-                <pre>{JSON.stringify(surveyResult, null, 2)}</pre> */}
-              </Typography>
+              Redirecting in {countdown} seconds...
+            </Typography>
+            <br/><br/>
           </Box>
         </Container>
       </div>
       <footer style={{ backgroundColor: "#000", padding: "1rem", textAlign: "center" }}>
         <Typography variant="body2" sx={{ color: "#FFF" }}>
-        Redirecting in {countdown} seconds...
         <a
             href="#"
             onClick={handleAnchorClick}

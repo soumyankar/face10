@@ -54,7 +54,7 @@ export const SurveyFinal = () => {
     });
 
     return (
-        <div style={{ backgroundColor: "#000", width: "auto", height:"auto" }}>
+        <div style={{ backgroundColor: "#000", width: "100%", height:"100%" }}>
         <AppBar position="static" sx={{ backgroundColor: "#000" }}>
         <Header
                 className="header-instance"

@@ -12,7 +12,9 @@ import { useNavigate } from "react-router-dom";
 export const Cta = ({ property1, className }) => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/survey");
+    // navigate("/survey");
+    // Instead we navigate to the consent form now.
+    navigate("/consent")
   };
   return (
     <div className={`CTA ${property1} ${className}`} onClick={handleClick}>

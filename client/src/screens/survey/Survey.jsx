@@ -50,7 +50,7 @@ export const Survey = () => {
     });
 
     return (
-        <div style={{ backgroundColor: "#000", width: "auto", height:"auto" }}>
+        <div style={{ backgroundColor: "#000", width: "100%", height:"100%" }}>
         <AppBar position="static" sx={{ backgroundColor: "#000" }}>
         <Header
                 className="header-instance"
@@ -60,11 +60,11 @@ export const Survey = () => {
                 hideMenuItems="false"
               />
         </AppBar>
-        <div>
-        <Container className="my-survey" maxWidth="md" sx={{ marginTop: "2rem", backgroundColor:"#000" }}>
+        <Container>
+        <div className="my-survey" maxWidth="md" sx={{ marginTop: "2rem", backgroundColor:"#000" }}>
             <Survey.Survey model={surveyModel} />
-        </Container>
         </div>
+        </Container>
         </div>
         );
     };
