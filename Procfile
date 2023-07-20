@@ -1,1 +1,1 @@
-web: npx serve -s client/dist/index.html
+web: npx serve -s client/
