@@ -1,10 +1,10 @@
 {
-    "root": "dist/",
+    "root": "client/dist/",
     "routes": {
-      "**": "index.html"
+      "**": "client/index.html"
     },
     "https_only": true,
-    "error_page": "index.html",
+    "error_page": "client/index.html",
     "headers": {
       "/**": {
         "Cache-Control": "public, max-age=0, must-revalidate"
