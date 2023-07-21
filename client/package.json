@@ -4,7 +4,7 @@
   "description": "A survey application built for the NIAA project by Vrije Universiteit",
   "source": "./index.html",
   "scripts": {
-    "start": "serve",
+    "start": "parcel",
     "build": "parcel build --public-url ./ --no-scope-hoist",
     "dev": "parcel",
     "storybook": "storybook dev -p 6006",
