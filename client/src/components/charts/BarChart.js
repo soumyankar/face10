@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import Chart from 'chartjs/auto';
+import Chart from 'chart.js/auto';
 
 const BarChartComponent = ({ data, options }) => {
   const chartRef = useRef(null);
