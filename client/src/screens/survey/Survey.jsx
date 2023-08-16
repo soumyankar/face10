@@ -1,12 +1,11 @@
 /* REACT and ANIMA and MUI*/
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useHistory from react-router-dom
 import { AppBar, Toolbar, Typography, Container } from "@mui/material";
 
 /* SURVEY.js */
 import * as Survey from 'survey-react';
 import { Model } from 'survey-core';
-import axios from 'axios';
 // import 'survey-core/defaultV2.min.css';
 import surveyJson from './SurveyData.json';
 
@@ -22,31 +21,32 @@ import { MenuVariant } from "../../components/MenuVariant";
 /* BACKEND ENDPOINTS */
 // Grab the endpoint for the analysis page
 // Base server URL + Endpoint URL
-const surveyResponseHandlerEndpoint = process.env.REACT_APP_BACKEND_URL + process.env.REACT_APP_SURVEY_RESPONSE_HANDLER_ENDPOINT;
-console.log(surveyResponseHandlerEndpoint);
+const surveyStartApi = process.env.REACT_APP_BACKEND_URL + process.env.REACT_APP_SURVEY_START_RESPONSE_HANDLER_ENDPOINT;
+console.log(surveyStartApi);
 
 export const Survey = () => {
     const navigate = useNavigate(); // Get the history object from react-router-dom
     const [surveyResult, setSurveyResult] = useState(null);
     // Now we try to make a request to the backend.
-    const surveyComplete = useCallback(async (surveyResponse) => {
-        try {
-            const response = await axios.post(surveyResponseHandlerEndpoint, surveyResponse);
-            console.log('Data sent successfully:', response.data);
-            // Perform any additional actions upon successful response
-            
-            // Redirect to a new page
-            navigate('/survey/transition', { state: { surveyResult: surveyResponse } }); // Replace '/thank-you' with the desired URL
-        } catch (error) {
-            console.error('Error sending data:', error);
-            // Handle the error appropriately
-        }
-    }, [navigate]);
+    async function submitSurvey(surveyResponse) {
+        await fetch(surveyStartApi, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(surveyResponse),
+          })
+          .catch(error => {
+            window.alert(error);
+            return;
+          });
+          navigate('/survey/transition', { state: { surveyResult: surveyResponse } });
+    }
     
     const surveyModel = new Model(surveyJson);
     surveyModel.onComplete.add((sender) => {
         setSurveyResult(sender.data);
-        surveyComplete(sender.data);
+        submitSurvey(sender.data);
     });
 
     return (

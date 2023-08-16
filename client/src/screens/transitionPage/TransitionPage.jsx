@@ -1,19 +1,17 @@
 /* REACT */
 import React, { useEffect, useState } from "react";
-import { useLocation, useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 /* MUI */
-import { Box, Typography, useTheme } from "@mui/material";
-import { AppBar, Toolbar, Typography, Container } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
+import { AppBar, Typography, Container } from "@mui/material";
 
 /* COMPONENTS */
 import { Header } from "../../components/Header";
 import { MenuVariant } from "../../components/MenuVariant";
 
 export const TransitionPage = () => {
-  const location = useLocation();
-  const surveyResult = location.state && location.state.surveyResult;
-
+  const navigate = useNavigate();
   const [countdown, setCountdown] = useState(10);
 
   useEffect(() => {
@@ -24,9 +22,8 @@ export const TransitionPage = () => {
     setTimeout(() => {
       clearInterval(timer);
       /* LINK TO GENDER DETECTION MODEL */
-      window.location.href = process.env.FLASK_APP_BACKEND_URL;
+      window.open(process.env.FLASK_APP_BACKEND_URL, '_blank');
       /* ONLY USE HISTORY WHEN REDIRECTING WITHIN APPLICATION */
-      // history.push("http://127.0.0.1:5000"); // Replace "/target-page" with your desired redirection link
     }, 10000);
 
     return () => {
@@ -36,9 +33,15 @@ export const TransitionPage = () => {
 
   const handleAnchorClick = () => {
     // using window.location.href because the model is in different repo.
-    window.location.href = process.env.FLASK_APP_BACKEND_URL;
+    window.open(process.env.FLASK_APP_BACKEND_URL, '_blank');
     // navigate("/"); // Replace "/another-page" with your desired redirection link
   };
+
+  const handleRedirectClick = () => {
+    // using window.location.href to redirect the page
+    navigate('/survey/final');
+  };
+  
   return (
     <div style={{ backgroundColor: "#000", width: "100%", height: "100%" }}>
       <AppBar position="static" sx={{ backgroundColor: "#000" }}>
@@ -50,26 +53,30 @@ export const TransitionPage = () => {
           hideMenuItems="false"
         />
       </AppBar>
-      <div style={{ flex: 1 }}>
+      <div style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <Container maxWidth="md" sx={{ marginTop: "2rem", backgroundColor: "#000" }}>
           <Box p={2}>
             <Typography variant="h2" sx={{ color: "#FFF", fontWeight: "bold" }}>
               Thats' the first part! 
             </Typography>
             <Typography variant="p" sx={{ color: "#FFF" }}>
-              The next leg of the study involves an interaction with a facial classification algorithm. Hold on tight!
-            {/* ONLY USING THIS DURING DEVELOPMENT */}
-            {/* {/* {surveyResult && (
-              <Typography variant="p" sx={{ color: "#FFF", fontWeight: "bold" }}>
-                Survey Result:
-                <pre>{JSON.stringify(surveyResult, null, 2)}</pre> */}
+              The next leg of the study involves an interaction with a facial classification algorithm. 
+              <br/>
+              A new tab will open up soon, please return back to this page once you are finished!
               </Typography>
           </Box>
+          <Button
+            variant="contained"
+            onClick={handleRedirectClick}
+            sx={{ marginTop: "1rem" , backgroundColor: "#E0FD2C", color:"#9c27b0"}}
+          >
+      Continue!
+    </Button>
         </Container>
       </div>
       <footer style={{ backgroundColor: "#000", padding: "1rem", textAlign: "center" }}>
         <Typography variant="body2" sx={{ color: "#FFF" }}>
-        Redirecting in {countdown} seconds...
+        Opening new tab in {countdown} seconds...
         <a
             href="#"
             onClick={handleAnchorClick}

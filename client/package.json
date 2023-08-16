@@ -27,8 +27,6 @@
     "@storybook/react": "^7.0.3",
     "@storybook/react-webpack5": "^7.0.3",
     "@storybook/testing-library": "^0.0.14-next.2",
-    "axios": "^1.4.0",
-    "chart.js": "^4.3.0",
     "parcel": "^2.8.0",
     "parcel-reporter-static-files-copy": "^1.5.0",
     "process": "^0.11.10",

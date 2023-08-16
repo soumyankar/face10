@@ -47,9 +47,10 @@ export const ThankYou = () => {
             <Button onClick={() => { navigate('/'); }} variant="contained" color="primary" sx={{ marginRight: "1rem" }}>
               Back to Start
             </Button>
-            <Button onClick={() => { navigate('/analysis'); }} variant="contained" color="secondary">
+            {/* REMOVING ANALYTICS BUTTON */}
+            {/* <Button onClick={() => { navigate('/analysis'); }} variant="contained" color="secondary">
               Analytics
-            </Button>
+            </Button> */}
           </Box>
       </Container>
     </div>
