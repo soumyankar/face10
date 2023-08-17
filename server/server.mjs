@@ -1,11 +1,11 @@
+/* ENV VARIABLES */
+import "./loadEnvironment.mjs";
+/* ENV VARIABLES */
+// loadEnvironment.mjs
+console.log('Environment variables loaded:', process.env);
 // Necessary libraries
 import express from "express";
 import cors from "cors";
-/* ENV VARIABLES */
-import "./loadEnvironment.mjs";
-// loadEnvironment.mjs
-console.log('Environment variables loaded:', process.env);
-/* ENV VARIABLES */
 
 /* EXPRESS APPLICATION */
 const app = express();
