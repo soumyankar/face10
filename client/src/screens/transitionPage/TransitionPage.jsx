@@ -31,15 +31,12 @@ export const TransitionPage = () => {
     };
   }, []);
 
-  const handleAnchorClick = () => {
-    // using window.location.href because the model is in different repo.
-    window.open(process.env.FLASK_APP_BACKEND_URL, '_blank');
-    // navigate("/"); // Replace "/another-page" with your desired redirection link
+  const openSurveyFinal = () => {
+    navigate('/survey/final');
   };
 
-  const handleRedirectClick = () => {
-    // using window.location.href to redirect the page
-    navigate('/survey/final');
+  const openInteractiveModel = () => {
+    window.open(process.env.FLASK_APP_BACKEND_URL, '_blank');
   };
   
   return (
@@ -53,7 +50,7 @@ export const TransitionPage = () => {
           hideMenuItems="false"
         />
       </AppBar>
-      <div style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <div style={{ flex: 1 }}>
         <Container maxWidth="md" sx={{ marginTop: "2rem", backgroundColor: "#000" }}>
           <Box p={2}>
             <Typography variant="h2" sx={{ color: "#FFF", fontWeight: "bold" }}>
@@ -62,27 +59,27 @@ export const TransitionPage = () => {
             <Typography variant="p" sx={{ color: "#FFF" }}>
               The next leg of the study involves an interaction with a facial classification algorithm. 
               <br/>
-              A new tab will open up soon, please return back to this page once you are finished!
+              Please click on the button below to open up the interactive model. Follow the instructions there and return to this page once you are done!
               </Typography>
           </Box>
           <Button
             variant="contained"
-            onClick={handleRedirectClick}
-            sx={{ marginTop: "1rem" , backgroundColor: "#E0FD2C", color:"#9c27b0"}}
+            onClick={openInteractiveModel}
+            sx={{ marginTop: "1rem" , backgroundColor: "#E0FD2C", color:"#9c27b0", alignSelf:"center" }}
           >
-      Continue!
-    </Button>
+            Open Interactive Gender Classification Model
+          </Button>
         </Container>
       </div>
       <footer style={{ backgroundColor: "#000", padding: "1rem", textAlign: "center" }}>
         <Typography variant="body2" sx={{ color: "#FFF" }}>
-        Opening new tab in {countdown} seconds...
+        Once done,
         <a
             href="#"
-            onClick={handleAnchorClick}
+            onClick={openSurveyFinal}
             style={{ color: "#FFF", textDecoration: "none", borderBottom: "1px solid #9c27b0" }}
           >
-        ...or click here to redirect directly.
+         click here to move on to the final part of the survey.
           </a>
         </Typography>
       </footer>
