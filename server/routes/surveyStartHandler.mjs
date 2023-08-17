@@ -14,6 +14,13 @@ router.post("/", async (req, res) => {
   
     let collection = await db.collection("surveyStart");
     let result = await collection.insertOne(surveyResponse);
+      // Check if insertion was successful and log the result
+  if (result.insertedCount === 1) {
+    console.log("Data insertion successful:", result.insertedId);
+  } else {
+    console.log("Data insertion failed.");
+  }
+  
     res.send(result).status(204);
   });
   

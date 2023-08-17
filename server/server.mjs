@@ -16,8 +16,8 @@ app.use(express.json());
 
 /* ENDPOINTS */
 const PORT = process.env.PORT || 5050;
-const surveyStartApi = process.env.REACT_APP_BACKEND_URL+process.env.SURVEY_START_RESPONSE_HANDLER_ENDPOINT;
-const surveyFinalApi = process.env.REACT_APP_BACKEND_URL+process.env.SURVEY_FINAL_RESPONSE_HANDLER_ENDPOINT;
+const surveyStartApi = process.env.SURVEY_START_RESPONSE_HANDLER_ENDPOINT;
+const surveyFinalApi = process.env.SURVEY_FINAL_RESPONSE_HANDLER_ENDPOINT;
 /* ENDPOINTS */
 
 // Set up routes
