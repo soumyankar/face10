@@ -1,8 +1,8 @@
 {
-  "name": "system",
+  "name": "face10-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.mjs",
   "scripts": {
     "start-server": "cd server && node server.mjs",
     "start-client": "cd client && npm start",
