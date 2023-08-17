@@ -3,6 +3,8 @@ import express from "express";
 import cors from "cors";
 /* ENV VARIABLES */
 import "./loadEnvironment.mjs";
+// loadEnvironment.mjs
+console.log('Environment variables loaded:', process.env);
 /* ENV VARIABLES */
 
 /* EXPRESS APPLICATION */

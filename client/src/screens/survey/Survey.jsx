@@ -21,7 +21,7 @@ import { MenuVariant } from "../../components/MenuVariant";
 /* BACKEND ENDPOINTS */
 // Grab the endpoint for the analysis page
 // Base server URL + Endpoint URL
-const surveyStartApi = process.env.REACT_APP_SURVEY_START_RESPONSE_HANDLER_ENDPOINT;
+const surveyStartApi = process.env.REACT_APP_BACKEND_URL + process.env.REACT_APP_SURVEY_START_RESPONSE_HANDLER_ENDPOINT;
 console.log(surveyStartApi);
 
 export const Survey = () => {
